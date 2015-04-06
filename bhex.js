@@ -21,6 +21,37 @@ function Hex2Bin(n){if(!checkHex(n))return 0;return parseInt(n,16).toString(2)}
 function Hex2Dec(n){if(!checkHex(n))return 0;return parseInt(n,16).toString(10)}
 
 /*
+ * Credit: http://www.qodo.co.uk/assets/files/uploads/javascript-restrict-keyboard-character-input.html
+ */
+// create as many regular expressions here as you need:
+var hexOnly = /[0-9a-fA-F]/g;
+var digitsOnly = /[0-9]/g;
+var binOnly = /[01]/g;
+
+function restrictCharacters(myfield, e, restrictionType) {
+    if (!e) var e = window.event
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    
+    // if they pressed esc... remove focus from field...
+    if (code==27) { this.blur(); return false; }
+	
+    // ignore if they are press other keys
+    // strange because code: 39 is the down key AND ' key...
+    // and DEL also equals .
+    if (!e.ctrlKey && code!=9 && code!=8 && code!=36 && code!=37 && code!=38 && (code!=39 || (code==39 && character=="'")) && code!=40) {
+	if (character.match(restrictionType)) {
+	    return true;
+	} else {
+	    return false;
+	}
+	
+    }
+}
+
+
+/*
  * Update functions
  */
 function updateAll(newval)

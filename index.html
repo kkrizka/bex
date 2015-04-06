@@ -10,9 +10,9 @@
 <h1>Binary - dEcimal - heXadecimal Converter</h1>
 
 <div class="inputs">
-  <span class="input hex">Hex: <input type="text" name="hex" id="hex" oninput="updateFromHex(this)" /></span>
-  <span class="input dec">Decimal: <input type="text" name="dec" id="dec" oninput="updateFromDec(this)" /></span>
-  <span class="input bin">Binary: <input type="text" name="bin" id="bin" oninput="updateFromBin(this)" /></span>
+  <span class="input hex">Hex: <input type="text" name="hex" id="hex" oninput="updateFromHex(this)" onkeypress="return restrictCharacters(this, event, hexOnly)" /></span>
+  <span class="input dec">Decimal: <input type="text" name="dec" id="dec" oninput="updateFromDec(this)" onkeypress="return restrictCharacters(this, event, digitsOnly)" /></span>
+  <span class="input bin">Binary: <input type="text" name="bin" id="bin" oninput="updateFromBin(this)" onkeypress="return restrictCharacters(this, event, binOnly)" /></span>
 </div>
 
 <table id="bittable">
