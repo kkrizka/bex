@@ -93,3 +93,20 @@ function toggleBit(bittd)
 
     updateFromTable();
 }
+
+/*
+ * Operations
+ */
+function bitshift_right()
+{
+    value=parseInt(document.getElementById("dec").value)
+    newvalue=value>>1
+    updateAll(newvalue)
+}
+
+function bitshift_left()
+{
+    value=parseInt(document.getElementById("dec").value)
+    newvalue=value<<1
+    updateAll(newvalue)
+}

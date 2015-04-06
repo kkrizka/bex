@@ -17,12 +17,8 @@ h1 {
 table#bittable {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
     width: 800px;
     border-collapse: collapse;
-}
-
-table#bittable {
     border: none;
     outline: none;
     margin-top: 40px;
@@ -98,4 +94,20 @@ span.bin input {
     width: 300px;
     background: white;
     border: 1px solid black;
+}
+
+div.operations {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;    
+    width: 850px;
+    text-align: right;   
+}
+
+div.operations input {
+    background: white;
+    border: 1px solid black;
+    width: 80px;
+    height: 30px;
+    font-size: 15pt;
 }
