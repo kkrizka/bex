@@ -1,5 +1,5 @@
 # bex
-Programmers Binary - Decimal - Hexadecimal Converter
+Binary - dEcimal - heXadecimal Converter
 
 Demo available at http://hep.uchicago.edu/~kkrizka/bex/
 
