@@ -28,6 +28,7 @@ function updateFromHex(element)
 	hexval=element.value;
 	document.getElementById("dec").value=Hex2Dec(hexval);
 	document.getElementById("bin").value=Hex2Bin(hexval);
+	updateTable(parseInt(hexval,16));
 }
 
 function updateFromDec(element)
@@ -35,6 +36,7 @@ function updateFromDec(element)
 	decval=element.value;
 	document.getElementById("hex").value=Dec2Hex(decval);
 	document.getElementById("bin").value=Dec2Bin(decval);
+	updateTable(parseInt(decval,10));
 }
 
 function updateFromBin(element)
@@ -42,4 +44,42 @@ function updateFromBin(element)
 	binval=element.value;
 	document.getElementById("hex").value=Bin2Hex(binval);
 	document.getElementById("dec").value=Bin2Dec(binval);
+	updateTable(parseInt(binval,2));
+}
+
+function updateFromTable()
+{
+	// Build up bitstring
+	bitstring="";
+	for(i=31;i>=0;i--)
+	{
+		td=document.getElementById("bit"+pad(i,2));
+		bitstring+=td.innerHTML;
+	}
+
+	document.getElementById("hex").value=Bin2Hex(bitstring)
+	document.getElementById("dec").value=Bin2Dec(bitstring)
+	document.getElementById("bin").value=bitstring
+}
+
+function updateTable(newval)
+{
+	binstring=pad(Dec2Bin(newval),32);
+	for(i=31;i>=0;i--)
+	{
+		td=document.getElementById("bit"+pad(i,2));
+		td.innerHTML=binstring.charAt(31-i)
+	}	
+}
+
+/*
+ * Bit table
+ */
+function toggleBit(bittd)
+{
+	bitval=parseInt(bittd.innerHTML,'2');
+	bitval=bitval?0:1;
+	bittd.innerHTML=bitval;
+
+	updateFromTable();
 }
