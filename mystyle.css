@@ -1,0 +1,81 @@
+h1 {
+	text-align: center;
+}
+
+#footer {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 10pt;
+}
+
+table#bittable {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 800px;
+	border-collapse: collapse;
+}
+
+table#bittable {
+	border: none;
+	outline: none;
+}
+
+table#bittable td.bitcount {
+	font-size: 8pt;
+	vertical-align: top;
+	text-align: right;
+	padding: 0px 0px 0px 0px;
+	margin: none;
+	cursor: hand;
+}
+
+table#bittable td.bit {
+	font-size: 20pt;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	margin: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+div.inputs {
+	text-align: center;
+	margin-top: 50px;
+}
+
+span.input {
+	display: inline-block;
+}
+
+span.hex {
+	margin-right: 40px;
+}
+
+span.dec {
+	margin-right: 40px;
+}
+
+span.bin {
+}
+
+span.input input {
+	font-family: "Courier New", Courier, monospace;
+}
+
+span.hex input {
+	width: 150px;
+	background: white;
+	border: 1px solid black;
+}
+
+span.dec input {
+	width: 150px;
+	background: white;
+	border: 1px solid black;
+}
+
+span.bin input {
+	width: 300px;
+	background: white;
+	border: 1px solid black;
+}

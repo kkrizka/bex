@@ -1,50 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Programmers Binary - Decimal - Hexadecimal Converter</title>
+<title>Programmer's Binary - Decimal - Hexadecimal Converter</title>
 <script type="text/javascript" src="bhex.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
 
-Hex: <input type="text" name="hex" id="hex" oninput="updateFromHex(this)" />
-Decimal: <input type="text" name="dec" id="dec" oninput="updateFromDec(this)" />
-Binary: <input type="text" name="bin" id="bin" oninput="updateFromBin(this)" />
+<h1>Programmer's Binary - Decimal - Hexadecimal Converter</h1>
+
+<div class="inputs">
+<span class="input hex">Hex: <input type="text" name="hex" id="hex" oninput="updateFromHex(this)" /></span>
+<span class="input dec">Decimal: <input type="text" name="dec" id="dec" oninput="updateFromDec(this)" /></span>
+<span class="input bin">Binary: <input type="text" name="bin" id="bin" oninput="updateFromBin(this)" /></span>
+</div>
 
 <table id="bittable">
 <tr>
-<td id="bit31" onclick="toggleBit(this)">0</td>
-<td id="bit30" onclick="toggleBit(this)">0</td>
-<td id="bit29" onclick="toggleBit(this)">0</td>
-<td id="bit28" onclick="toggleBit(this)">0</td>
-<td id="bit27" onclick="toggleBit(this)">0</td>
-<td id="bit26" onclick="toggleBit(this)">0</td>
-<td id="bit25" onclick="toggleBit(this)">0</td>
-<td id="bit24" onclick="toggleBit(this)">0</td>
-<td id="bit23" onclick="toggleBit(this)">0</td>
-<td id="bit22" onclick="toggleBit(this)">0</td>
-<td id="bit21" onclick="toggleBit(this)">0</td>
-<td id="bit20" onclick="toggleBit(this)">0</td>
-<td id="bit19" onclick="toggleBit(this)">0</td>
-<td id="bit18" onclick="toggleBit(this)">0</td>
-<td id="bit17" onclick="toggleBit(this)">0</td>
-<td id="bit16" onclick="toggleBit(this)">0</td>
-<td id="bit15" onclick="toggleBit(this)">0</td>
-<td id="bit14" onclick="toggleBit(this)">0</td>
-<td id="bit13" onclick="toggleBit(this)">0</td>
-<td id="bit12" onclick="toggleBit(this)">0</td>
-<td id="bit11" onclick="toggleBit(this)">0</td>
-<td id="bit10" onclick="toggleBit(this)">0</td>
-<td id="bit09" onclick="toggleBit(this)">0</td>
-<td id="bit08" onclick="toggleBit(this)">0</td>
-<td id="bit07" onclick="toggleBit(this)">0</td>
-<td id="bit06" onclick="toggleBit(this)">0</td>
-<td id="bit05" onclick="toggleBit(this)">0</td>
-<td id="bit04" onclick="toggleBit(this)">0</td>
-<td id="bit03" onclick="toggleBit(this)">0</td>
-<td id="bit02" onclick="toggleBit(this)">0</td>
-<td id="bit01" onclick="toggleBit(this)">0</td>
-<td id="bit00" onclick="toggleBit(this)">0</td>
+<td id="bit31" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit30" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit29" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit28" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit27" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit26" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit25" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit24" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit23" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit22" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit21" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit20" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit19" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit18" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit17" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit16" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit15" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit14" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit13" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit12" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit11" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit10" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit09" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit08" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit07" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit06" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit05" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit04" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit03" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit02" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit01" class="bit" onclick="toggleBit(this)">0</td>
+<td id="bit00" class="bit" onclick="toggleBit(this)">0</td>
+</tr>
+
+<tr>
+<td class="bitcount">31</td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount">24</td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount">16</td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount">8</td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount"></td>
+<td class="bitcount">0</td>
 </tr>
 </table>
+
+<div id="footer">
+a bored KK production - Code/Bugs/Requests
+</div>
 </body>
 </html>
