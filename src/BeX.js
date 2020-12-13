@@ -21,7 +21,7 @@ class BeX extends Component {
     }
 
     setValue(value) {
-        this.setState({value: value})
+        this.setState({value: value>>>0})
     }
     
     bitshiftLeft() {
