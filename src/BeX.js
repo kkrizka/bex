@@ -21,8 +21,6 @@ class BeX extends Component {
     }
 
     setValue(value) {
-        console.log("setValue",value)
-
         this.setState({value: value})
     }
     
