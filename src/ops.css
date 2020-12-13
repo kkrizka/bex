@@ -1,0 +1,57 @@
+div.bexinputs {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.bexinputs span.input {
+    display: inline-block;
+}
+
+.bexinputs span.hex {
+    margin-right: 40px;
+}
+
+.bexinputs span.dec {
+    margin-right: 40px;
+}
+
+.bexinputs span.bin {
+}
+
+.bexinputs input {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.bexinputs .hex input {
+    width: 150px;
+    background: white;
+    border: 1px solid black;
+}
+
+.bexinputs .dec input {
+    width: 150px;
+    background: white;
+    border: 1px solid black;
+}
+
+.bexinputs .bin input {
+    width: 300px;
+    background: white;
+    border: 1px solid black;
+}
+
+div.operations {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;    
+    width: 850px;
+    text-align: right;   
+}
+
+div.operations input {
+    background: white;
+    border: 1px solid black;
+    width: 80px;
+    height: 30px;
+    font-size: 15pt;
+}

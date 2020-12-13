@@ -3,21 +3,18 @@ import React, { Component } from 'react';
 class BinaryDisplay extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            value: 2,
-        };
 
         this.toggleBit = this.toggleBit.bind(this);
     }
 
     toggleBit(bit) {
-        this.setState(state => ({
-            value: this.state.value^(1<<bit)
-        }));
+        let newvalue=this.props.value^(1<<bit)
+
+        this.props.onChange(newvalue)
     }
     
     render() {
-        let strval = (this.state.value>>>0).toString(2).padStart(32,'0');
+        let strval = (this.props.value>>>0).toString(2).padStart(32,'0');
 
         const bits = [];
         const help = [];
