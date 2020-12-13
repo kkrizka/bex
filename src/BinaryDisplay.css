@@ -1,0 +1,31 @@
+.bittable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    border-collapse: collapse;
+    border: none;
+    outline: none;
+    margin-top: 40px;
+    
+}
+
+.#bittable td.bitcount {
+    font-size: 8pt;
+    vertical-align: top;
+    text-align: right;
+    padding: 0px 0px 0px 0px;
+    margin: none;
+}
+
+.bittable td.bit {
+    font-size: 20pt;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: none;
+    cursor: pointer;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.bittable td.bithelp {
+    border-right: 1px dashed black;
+}

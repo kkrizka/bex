@@ -23,8 +23,11 @@ class BinaryDisplay extends Component {
         const help = [];
         for(let i=0; i<32; i++) {
             let b = 31-i;
-            bits.push(<td key={b} className="bit" onClick={() => this.toggleBit(b)}>{strval.charAt(i)}</td>);
-            help.push(<td key={b} className="bitcount">{(b%8===0)?b:""}</td>);
+            let bitClass    =(b%8===0)?"bit bithelp"     :"bit"            
+            let bithelpClass=(b%8===0)?"bitcount bithelp":"bitcount"
+
+            bits.push(<td key={b} className={bitClass} onClick={() => this.toggleBit(b)}>{strval.charAt(i)}</td>);
+            help.push(<td key={b} className={bithelpClass}>{(b%8===0)?b:""}</td>);
         }
 
         return (
