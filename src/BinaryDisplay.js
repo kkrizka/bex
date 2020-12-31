@@ -23,7 +23,7 @@ class BinaryDisplay extends Component {
             let bitClass    =(b%8===0)?"bit bithelp"     :"bit"            
             let bithelpClass=(b%8===0)?"bitcount bithelp":"bitcount"
 
-            bits.push(<td key={b} className={bitClass} onClick={() => this.toggleBit(b)}>{strval.charAt(i)}</td>);
+            bits.push(<td key={b} className={bitClass} title={b} onClick={() => this.toggleBit(b)}>{strval.charAt(i)}</td>);
             help.push(<td key={b} className={bithelpClass}>{(b%8===0)?b:""}</td>);
         }
 
